@@ -1,0 +1,24 @@
+openmim
+mmengine
+mmdet
+mmcv==2.1.0 -f https://download.openmmlab.com/mmcv/dist/cu121/torch2.1/index.html
+pyclipper
+scikit-image
+pycocotools
+imgaug
+rapidfuzz
+einops
+lmdb
+pillow
+git+https://github.com/facebookresearch/detectron2.git
+openpyxl
+cdifflib
+pandas
+numpy
+imutils
+pathlib
+opencv-python
+gdown
+boto3
+requests_toolbelt
+
