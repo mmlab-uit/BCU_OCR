@@ -1,0 +1,9 @@
+fastapi==0.111.0
+openai==0.28.0
+protobuf==5.26.1
+pydantic==1.10.15
+python-dotenv==1.0.1
+Requests==2.32.1
+veryfi==3.4.
+uvicorn==0.29.0
+google-cloud-vision==2.4.2

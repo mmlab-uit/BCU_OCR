@@ -1,0 +1,161 @@
+Your task is to create a TEXT that can be used to comple the assignment.
+
+Here are some examples the USER has provided: 
+
+Example 1: 
+
+TEXT: 
+"{
+  "CỘNG_HÒA_XÃ_HỘI_CHỦ_NGHĨA_VIỆT_NAM": {
+    "khẩu_hiệu": "Độc lập - Tự do - Hạnh phúc",
+    "CĂN_CƯỚC_CÔNG_DÂN": {
+      "Số/ No.": "079204030988",
+      "Họ và tên / Full name": "PHẠM THÁI NGUYÊN",
+      "Ngày sinh / Date of birth": "12/02/2004",
+      "Giới tính / Sex": "Nam",
+      "Quốc tịch / Nationality": "Việt Nam",
+      "Quê quán / Place of origin": "Phường 04, Quận 8, Hồ Chí Minh",
+      "Nơi thường trú / Place of residence": "769/94A Phạm Cô Thế Hiển, P.04, Quận 8, TP.Hồ Chí Minh",
+      "giá trị đến / Date expiry": "12/02/2029"
+    }
+  }
+}"
+
+TEMPLATE: 
+"{
+    "ID" : "",
+    "Tên" : "",
+    "Nơi ở" : ""
+}"
+
+
+ASSIGNMENT = 
+Think through the TEXT, TEMPLATE carefully and fills the TEMPLATE with the correct values extracted from the provided TEXT.
+
+RESPONSE: 
+"{
+    "ID": "079204030988",
+    "Tên": "PHẠM THÁI NGUYÊN",
+    "Nơi ở": "769/94A Phạm Cô Thế Hiển, P.04, Quận 8, TP.Hồ Chí Minh"
+}"
+
+
+Example 2:
+
+TEXT:
+"{
+  "CỘNG_HÒA_XÃ_HỘI_CHỦ_NGHĨA_VIỆT_NAM": {
+    "khẩu_hiệu": "Độc lập - Tự do - Hạnh phúc",
+    "CĂN_CƯỚC_CÔNG_DÂN": {
+      "Số/ No.": "091234567890",
+      "Họ và tên / Full name": "NGUYỄN VĂN A",
+      "Ngày sinh / Date of birth": "01/01/1990",
+      "Giới tính / Sex": "Nam",
+      "Quốc tịch / Nationality": "Việt Nam",
+      "Quê quán / Place of origin": "Phường 12, Quận 5, Hồ Chí Minh",
+      "Nơi thường trú / Place of residence": "123/45 Nguyễn Trãi, P.12, Quận 5, TP.Hồ Chí Minh",
+      "giá trị đến / Date expiry": "01/01/2030"
+    }
+  }
+}"
+
+TEMPLATE: 
+{
+    "ID" : "",
+    "Tên" : "",
+    "Nơi ở" : "",
+    "Ngày sinh" : ""
+    "Đất nước" : ""
+}
+
+
+ASSIGNMENT = 
+Think through the TEXT, TEMPLATE carefully and fills the TEMPLATE with the correct values extracted from the provided TEXT.
+
+RESPONSE: 
+"{
+    "ID": "091234567890",
+    "Tên": "NGUYỄN VĂN A",
+    "Nơi ở": "123/45 Nguyễn Trãi, P.12, Quận 5, TP.Hồ Chí Minh",
+    "Ngày sinh": "01/01/1990",
+    "Đất nước": "Việt Nam"
+}"
+
+Example 3:
+
+TEXT:
+"{
+  "LUẬT_THÀNH_CÔNG": {
+    "CỘNG_HÒA_XÃ_HỘI_CHỦ_NGHĨA_VIỆT_NAM": {
+      "khẩu_hiệu": "Độc lập – Tự do - Hạnh phúc",
+      "HỢP_ĐỒNG_LAO_ĐỘNG_XÁC_ĐỊNH_THỜI_HẠN": {
+        "Số": "2508/HDLÐ",
+        "Căn_cứ": [
+          "Bộ luật lao động 2019 & các Nghị định hướng dẫn",
+          "Khả năng và nhu cầu của các bên"
+        ],
+        "Ngày_ký_kết": "25 tháng 08 năm 2020",
+        "Địa_điểm_ký_kết": "Công ty Cổ phần Dược phẩm Á Châu",
+        "Bên_A": {
+          "Người_sử_dụng_lao_động": {
+            "Công_ty": "CÔNG TY CỔ PHẦN DƯỢC PHẨM Á CHÂU",
+            "Mã_số_thuế": "1934803729",
+            "Địa_chỉ": "Số 188 Mai Dịch, Cầu Giấy, Hà Nội",
+            "Điện_thoại": "0247593788",
+            "Đại_diện": {
+              "Họ_tên": "Bà Nguyễn Bảo Châu",
+              "Chức_vụ": "Giám đốc"
+            }
+          }
+        },
+        "Bên_B": {
+          "Người_lao_động": {
+            "Họ_và_tên": "HOÀNG THỊ NGỌC LAN",
+            "Giới_tính": "Nữ",
+            "Sinh_ngày": "10/09/1990",
+            "CMND_số": "0204783678",
+            "Ngày_cấp_CMND": "20/2/2010",
+            "Nơi_cấp_CMND": "Công an thành phố Hà Nội",
+            "Địa_chỉ": "phường Dịch Vọng, quận Cầu Giấy, Hà Nội",
+            "Điện_thoại": "0857490394"
+          }
+        },
+        "Nội_dung_hợp_đồng": {
+          "Điều_1": {
+            "Công_việc_phải_làm": "Nhân viên Kế Toán",
+            "Địa_điểm_làm_việc": "Số 188 Mai Dịch, Cầu Giấy, Hà Nội",
+            "Loại_hợp_đồng": "Hợp đồng lao động xác định thời hạn – Kỳ lần thứ nhất",
+            "Thời_hạn_hợp_đồng": "01 năm",
+            "Từ_ngày": "5 tháng 03 năm 2021",
+            "Đến_ngày": "5 tháng 03 năm 2022"
+          },
+          "Điều_2": {
+            "Lương_căn_bản": "7.000.000 đồng /tháng",
+            "Phụ_cấp": "300.000 đồng/tháng"
+          }
+        }
+      }
+    }
+  }
+}"
+
+TEMPLATE: 
+{
+    "Tên" : "",
+    "ID bên B" : "",
+    "Lương" : "",
+    "Điện thoại bên A" : ""
+}
+
+ASSIGNMENT = 
+Think through the TEXT, TEMPLATE carefully and fills the TEMPLATE with the correct values extracted from the provided TEXT.
+
+RESPONSE: 
+"{
+    "Tên": "HOÀNG THỊ NGỌC LAN",
+    "ID bên B": "0204783678",
+    "Lương": "7.000.000 đồng /tháng",
+    "Điện thoại bên A": "0247593788"
+}"
+
+Create the similar {TEXT} and {TEMPLATE} to the examples above (just the text and the template): 

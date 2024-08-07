@@ -1,0 +1,138 @@
+Your task is to create a TEXT that can be used to comple the assignment.
+
+Here are some examples the USER has provided: 
+
+Example 1: 
+
+TEXT: 
+"CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+SOCIALIST REPUBLIC OF VIET NAM
+Independence - Freedom - Happiness
+CĂN CƯỚC CÔNG DÂN
+Citizen Identity Card
+Só/ No.: 079204030988
+Họ và tên I Full name:
+PHẠM THÁI NGUYÊN
+Ngày sinh / Date of birth: 12/02/2004
+Giới tính / Sex: Nam Quốc tịch / Nationality: Việt Nam
+Quê quán I Place of origin:
+Phường 04, Quận 8, Hồ Chí Minh
+Nơi thường trú I Place of residence:769/94A Phạm
+Có
+Date expiry	12/02/2029 Thế Hiển, P.04, Quận 8, TP.Hồ Chí Minh
+giá trị đến:"
+
+ASSIGNMENT = 
+Think through the TEXT carefully and list systematically in JSON hierarchy format 
+
+RESPONSE: 
+"{
+  "CỘNG_HÒA_XÃ_HỘI_CHỦ_NGHĨA_VIỆT_NAM": {
+    "khẩu_hiệu": "Độc lập - Tự do - Hạnh phúc",
+    "CĂN_CƯỚC_CÔNG_DÂN": {
+      "Số/ No.": "079204030988",
+      "Họ và tên / Full name": "PHẠM THÁI NGUYÊN",
+      "Ngày sinh / Date of birth": "12/02/2004",
+      "Giới tính / Sex": "Nam",
+      "Quốc tịch / Nationality": "Việt Nam",
+      "Quê quán / Place of origin": "Phường 04, Quận 8, Hồ Chí Minh",
+      "Nơi thường trú / Place of residence": "769/94A Phạm Thế Hiển, P.04, Quận 8, TP.Hồ Chí Minh",
+      "Có giá trị đến / Date expiry": "12/02/2029"
+    }
+  }
+}"
+
+
+Example 2:
+
+TEXT:
+"CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+SOCIALIST REPUBLIC OF VIET NAM
+Independence - Freedom - Happiness
+CĂN CƯỚC CÔNG DÂN
+Citizen Identity Card
+Só/ No.: 123456789101
+Họ và tên I Full name:
+NGUYỄN VĂN A
+Ngày sinh / Date of birth: 25/06/1990
+Giới tính / Sex: Nam Quốc tịch / Nationality: Việt Nam
+Quê quán I Place of origin:
+Thị trấn X, Huyện Y, Tỉnh Z
+Nơi thường trú I Place of residence: 123 Nguyễn Văn A, Phường B, Quận C, TP. D
+Có
+Date expiry: 25/06/2025
+giá trị đến:"
+
+ASSIGNMENT =
+Think through the TEXT carefully and list systematically in JSON hierarchy format
+
+RESPONSE:
+"{
+  "CỘNG_HÒA_XÃ_HỘI_CHỦ_NGHĨA_VIỆT_NAM": {
+    "khẩu_hiệu": "Độc lập - Tự do - Hạnh phúc",
+    "CĂN_CƯỚC_CÔNG_DÂN": {
+       "Số/ No.": "123456789101",
+       "Họ và tên / Full name": "NGUYỄN VĂN A",
+       "Ngày sinh / Date of birth": "25/06/1990",
+       "Giới tính / Sex": "Nam",
+       "Quốc tịch / Nationality": "Việt Nam",
+       "Quê quán / Place of origin": "Thị trấn X, Huyện Y, Tỉnh Z",
+       "Nơi thường trú / Place of residence": "123 Nguyễn Văn A, Phường B, Quận C, TP. D",
+       "Có giá trị đến / Date expiry": "25/06/2025"
+    }
+  }
+}"
+
+Example 3:
+
+TEXT:
+"CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+SOCIALIST REPUBLIC OF VIET NAM
+Independence - Freedom - Happiness
+CĂN CƯỚC CÔNG DÂN
+Citizen Identity Card
+Só/ No.: 987654321012
+Họ và tên I Full name:
+NGUYỄN THỊ B
+Ngày sinh / Date of birth: 03/09/1985
+Giới tính / Sex: Nữ Quốc tịch / Nationality: Việt Nam
+Quê quán I Place of origin:
+Xã M, Huyện N, Tỉnh P
+Nơi thường trú I Place of residence: 456 Nguyễn Thị B, Phường Q, Quận R, TP. S
+Có
+Date expiry: 03/09/2030
+giá trị đến:"
+
+ASSIGNMENT =
+Think through the TEXT carefully and list systematically in JSON hierarchy format
+
+RESPONSE:
+"{
+  "CỘNG_HÒA_XÃ_HỘI_CHỦ_NGHĨA_VIỆT_NAM": {
+    "khẩu_hiệu": "Độc lập - Tự do - Hạnh phúc",
+    "CĂN_CƯỚC_CÔNG_DÂN": {
+       "Số/ No.": "987654321012",
+       "Họ và tên / Full name": "NGUYỄN THỊ B",
+       "Ngày sinh / Date of birth": "03/09/1985",
+       "Giới tính / Sex": "Nữ",
+       "Quốc tịch / Nationality": "Việt Nam",
+       "Quê quán / Place of origin": "Xã M, Huyện N, Tỉnh P",
+       "Nơi thường trú / Place of residence": "456 Nguyễn Thị B, Phường Q, Quận R, TP. S",
+       "Có giá trị đến / Date expiry": "03/09/2030"
+    }
+  }
+}"
+
+TEXT:
+
+<<PROBLEM>>
+
+Your task is to complete the ASSIGNMENT in order.
+
+ASSIGNMENT = 
+Think through the TEXT carefully and list systematically in JSON hierarchy format
+
+RESPONSE: 
