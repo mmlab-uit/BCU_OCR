@@ -1,7 +1,0 @@
-type in terminal: docker-compose up --build
-
-The first time it will take about 3 minutes, after the text "webpack compiled" appears, go to localhost 3000
-
-after the first time it will only take a few seconds
-
-To stop running press ctrl + c twice
