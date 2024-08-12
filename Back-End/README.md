@@ -20,7 +20,7 @@ This project provide an API for optical character recognition (OCR) and text con
 1. ### Clone the repository:
 
    ```bash
-   https://github.com/SmaugTHEDrag/fastapi.git
+   https://github.com/SmaugTHEDrag/OCR_backend.git
    cd repository
 
 2. ### Install dependencies:
@@ -39,6 +39,6 @@ Replace your_openai_api_key with your actual OpenAI API key.
 4. ### Run the FastAPI server
 
    ```bash
-   uvicorn main:app --reload
+   uvicorn main:app --port 3000  --reload
    ```
 Replace `main` with the filename containing your FastAPI application.
