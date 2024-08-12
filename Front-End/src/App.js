@@ -73,6 +73,10 @@ function App() {
     }
   },[])
 
+  if (loading) {
+    return <LoadingIndicator />;
+  }
+
 
   return (
     <>
@@ -87,7 +91,7 @@ function App() {
             <Route path="/storedkey" element={<Suspense fallback={<LoadingIndicator />}><Storedkeys/></Suspense>} />
             {/* <Route path="/about" element={<Suspense fallback={<LoadingIndicator />}><About/></Suspense>} /> */}
             <Route path='/' element={ <Mainpage/> } />
-            <Route path="/process" element={<Process/>}/>
+            <Route path="/process" element={<Suspense fallback={<LoadingIndicator />}><Process/></Suspense>} />
             <Route path='/sign' element={ <Sign/> } />         
             <Route path='/login' element={ <Login/> } />         
             <Route path="/integration" element={ <Integration/>} />

@@ -369,10 +369,12 @@ const handleFileUpload = (e) => {
 
     useEffect(() => {
         if(ocrjson){
-            const cleanedJsonString = ocrjson.reply.replace(/```json\n|```/g, '');
+            // console.log(`ocrjson : ${JSON.stringify(ocrjson)}`)
+            const cleanedJsonString = ocrjson.reply.replace(/```json\n|```/g, '').replace(/^"|"$/g, '');
             // console.log(`cleanedjson string : ${cleanedJsonString}`);
 
             const parsedObject = JSON.parse(cleanedJsonString);
+            // console.log("parsedObject :",parsedObject);
 
             setobjectfield(parsedObject);
             // console.log(`${JSON.stringify(objectfield)}`)
@@ -769,7 +771,9 @@ const handleFileUpload = (e) => {
                                             <div className="border-2 p-3 rounded-xl hover:cursor-pointer hover:bg-red-600" onClick={() => {setshowform(false);setmodifyfield(false); setdeletefield(prev => !prev)}}>DELETE FIELD</div>
                                             <div className="border-2 p-3 rounded-xl hover:cursor-pointer hover:bg-yellow-600" onClick={() => {setshowform(false);setdeletefield(false); setmodifyfield(prev => !prev)}}>MODIFY</div>
                                         </div>
-                                        <div className="max-w-[35rem] text-wrap text-center text-orange-500">NOTE: Besides English, please use diacritical marks for the most accurate results.</div>
+                                        <div className="w-full flex justify-center">
+                                            <div className="max-w-[35rem] text-wrap text-center text-orange-500">NOTE: Besides English, please use diacritical marks for the most accurate results.</div>
+                                        </div>
                                         <select className="mt-2 p-2 text-md border-none rounded-md hover:cursor-pointer text-black w-fit text-wrap" onChange={(e) => { e.target.value ? setobjectfield(JSON.parse(productlist[e.target.value].objectfield)) : setobjectfield([])}}>
                                             <option value="">Select your saved template.</option>
                                             {
