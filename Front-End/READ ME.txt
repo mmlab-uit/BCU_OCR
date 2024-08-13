@@ -1,7 +1,20 @@
-type in terminal: docker-compose up --build
 
-The first time it will take about 3 minutes, after the text "webpack compiled" appears, go to localhost 3000
+Option 1: run with docker.
 
-after the first time it will only take a few seconds
+- type in terminal: docker-compose up --build
 
-To stop running press ctrl + c twice
+- The first time it will take about 3 minutes, after the text "webpack compiled" appears, go to localhost 3000
+
+- after the first time it will only take a few seconds
+
+- To stop running press ctrl + c twice
+
+Option 2: install packages
+
+- Type in terminal : npm install 
+
+- Wait for the installation process to finish and then type in terminal: npm start
+
+- Then the website will run on port 3000.
+
+- To stop running, press ctrl + c, a question will appear, then type in terminal: y then enter
