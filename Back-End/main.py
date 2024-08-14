@@ -14,6 +14,7 @@ from google.cloud import vision
 from google.oauth2 import service_account
 from fastapi.middleware.cors import CORSMiddleware
 import hashlib
+import uvicorn
 import datetime
 load_dotenv()
 app = FastAPI()
@@ -39,6 +40,8 @@ app.add_middleware(
 @app.get("/")
 async def test():
     return {"message":"Hello World!"}
+
+# http://localhost:3000/docs to see all endpoint
 
 # Hàm tạo một api key dựa trên thời gian hiện tại datetime 
 def generate_api_key(specific_datetime=None):
@@ -225,3 +228,6 @@ async def convert(raw_text: str, template: str):
     # Gặp lỗi sẽ hiện ra câu lệnh 
     except Exception as e:
         return {"error": str(e)}
+
+if __name__ == '__main__':
+    uvicorn.run(app, port=3000, host='0.0.0.0')
