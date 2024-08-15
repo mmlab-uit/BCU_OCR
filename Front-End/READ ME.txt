@@ -1,7 +1,7 @@
 
-Option 1: run with docker.
+Option 1: run with docker. (Note: require to open docker app or docker desktop to run)
 
-- type in terminal: docker-compose up --build
+- type in terminal: docker-compose up --build 
 
 - The first time it will take about 3 minutes, after the text "webpack compiled" appears, go to localhost 3000
 
